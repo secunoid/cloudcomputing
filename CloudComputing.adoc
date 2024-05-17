@@ -280,5 +280,11 @@ Microservices are key, and three microservices that play key role are authentica
 === Cost Management
 
 
+== AWS Certified Security-Speciality
+This section is dedicated to AWS Certified SEcurity Speciality certification
+
+=== Amazon GuardDuty
+
+
 
 
