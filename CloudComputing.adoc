@@ -285,6 +285,39 @@ This section is dedicated to AWS Certified SEcurity Speciality certification
 
 === Amazon GuardDuty
 
+Amazon GuardDuty Features
 
+* Accurate, Account-Level Threat Detection:
+  - Detects signs of account compromise, unusual API activity, and malicious IP addresses.
+  - Provides accurate threat detection even in complex environments.
+
+* Continuous Monitoring Across AWS Accounts and Workloads:
+  - Monitors AWS accounts using CloudTrail, VPC Flow Logs, and DNS logs.
+  - No additional software or infrastructure to deploy and maintain.
+
+* Threat Detections Developed and Optimized for the Cloud:
+  - Built-in detection techniques optimized for cloud environments.
+  - Categories include reconnaissance and instance compromise.
+
+* Threat Severity Levels for Efficient Prioritization:
+  - Prioritizes threats based on severity.
+  - Helps focus on critical issues first.
+
+* Automated Threat Response and Remediation:
+  - Provides automated responses to detected threats.
+  - Helps mitigate risks promptly.
+
+* Highly Available Threat Detection:
+  - GuardDuty operates independently from your resources.
+  - No impact on performance or availability.
+
+* One-Click Deployment with No Additional Software or Infrastructure:
+  - Easy to set up and manage.
+  - No need for additional security tools.
+
+* Can setup EventBridge rules to be notified in case of findings
+* EventBridge rules can target AWS Lambda or SNS
+* Can protect against CryptoCurrency attacks (has a dedicated “finding” for
+it)
 
 
