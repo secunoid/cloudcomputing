@@ -285,7 +285,7 @@ This section is dedicated to AWS Certified SEcurity Speciality certification
 
 === GuardDuty
 
-image::GuardDuty.png[GuardDuty,300,align="center"]
+image::GuardDuty.png[GuardDuty,align="center"]
 
 Guard Duty provides:
 
