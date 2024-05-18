@@ -285,7 +285,7 @@ This section is dedicated to AWS Certified SEcurity Speciality certification
 
 === GuardDuty
 
-image::product-page-diagram_Amazon-GuardDuty.png[]
+image::GuardDuty.png[]
 
 * Accurate, Account-Level Threat Detection:
   - Detects signs of account compromise, unusual API activity, and malicious IP addresses.
