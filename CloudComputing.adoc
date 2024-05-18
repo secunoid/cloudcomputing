@@ -285,31 +285,7 @@ This section is dedicated to AWS Certified SEcurity Speciality certification
 
 === GuardDuty
 
-=== Security Hub
-
-=== Detective
-
-=== Penetration Testing
-AWS customers are welcome to carry out security assessments or
-penetration tests against their AWS infrastructure without prior approval for
-8 services:
-
-. Amazon EC2 instances, NAT Gateways, and Elastic Load Balancers
-. Amazon RDS
-. Amazon CloudFront
-. Amazon Aurora
-. Amazon API Gateways
-. AWS Lambda and Lambda Edge functions
-. Amazon Lightsail resources
-. Amazon Elastic Beanstalk environments
-
-=== DDoS Simulation
-
-=== 
-
-
-
-Amazon GuardDuty Features
+image::product-page-diagram_Amazon-GuardDuty.png[]
 
 * Accurate, Account-Level Threat Detection:
   - Detects signs of account compromise, unusual API activity, and malicious IP addresses.
@@ -343,5 +319,29 @@ Amazon GuardDuty Features
 * EventBridge rules can target AWS Lambda or SNS
 * Can protect against CryptoCurrency attacks (has a dedicated “finding” for
 it)
+
+=== Security Hub
+
+=== Detective
+
+=== Penetration Testing
+AWS customers are welcome to carry out security assessments or
+penetration tests against their AWS infrastructure without prior approval for
+8 services:
+
+. Amazon EC2 instances, NAT Gateways, and Elastic Load Balancers
+. Amazon RDS
+. Amazon CloudFront
+. Amazon Aurora
+. Amazon API Gateways
+. AWS Lambda and Lambda Edge functions
+. Amazon Lightsail resources
+. Amazon Elastic Beanstalk environments
+
+=== DDoS Simulation
+
+
+
+
 
 
