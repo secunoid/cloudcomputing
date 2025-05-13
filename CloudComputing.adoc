@@ -249,6 +249,71 @@ Values in a Terraform script can be:
 
 ==== Azure
 
+Microsoft Azure Front Door is a global, scalable entry point that uses the Microsoft global edge network to create fast, secure, and highly scalable web applications. It provides load balancing, SSL offloading, and application acceleration with features like caching and route optimization.
+
+### **Azure Front Door vs. Other Azure Networking Services**
+Here’s how **Azure Front Door** compares to other Azure networking services:
+
+#### **1. Azure Front Door vs. Azure Application Gateway**
+| Feature | Azure Front Door | Azure Application Gateway |
+|---------|----------------|--------------------------|
+| **Scope** | Global (multi-region) | Regional (single region) |
+| **Layer** | Layer 7 (HTTP/HTTPS) | Layer 7 (HTTP/HTTPS) |
+| **Load Balancing** | Global load balancing | Regional load balancing |
+| **SSL Offloading** | Yes | Yes |
+| **WAF Integration** | Yes (Azure WAF) | Yes (Azure WAF) |
+| **Caching** | Yes (edge caching) | No |
+| **Routing** | URL-path, geo, latency-based | URL-path, host-based |
+| **Use Case** | Global apps, CDN, multi-region HA | Regional apps, API management, internal load balancing |
+
+👉 **When to use?**  
+- Use **Front Door** for global traffic distribution and multi-region redundancy.  
+- Use **Application Gateway** for internal or regional load balancing (e.g., AKS ingress, on-premises apps).
+
+---
+
+#### **2. Azure Front Door vs. Azure Traffic Manager**
+| Feature | Azure Front Door | Azure Traffic Manager |
+|---------|----------------|----------------------|
+| **Scope** | Global | Global |
+| **Layer** | Layer 7 (HTTP/HTTPS) | Layer 4 (DNS-based) |
+| **Protocols** | HTTP(S), WebSocket | Any (TCP, HTTP, etc.) |
+| **Latency-based Routing** | Yes | Yes |
+| **Failover** | Yes (instant) | Yes (DNS TTL delay) |
+| **WAF & Caching** | Yes | No |
+| **Use Case** | Web apps, APIs, CDN | Non-HTTP workloads (RDP, SMTP, databases) |
+
+👉 **When to use?**  
+- Use **Front Door** for web apps needing Layer 7 features (WAF, caching, URL routing).  
+- Use **Traffic Manager** for non-HTTP workloads (SQL, gaming servers, global TCP routing).
+
+---
+
+#### **3. Azure Front Door vs. Azure CDN**
+| Feature | Azure Front Door | Azure CDN (Microsoft, Verizon, Akamai) |
+|---------|----------------|--------------------------------------|
+| **Primary Use** | Global load balancing + CDN | Pure content delivery (static assets) |
+| **Dynamic Acceleration** | Yes (via Anycast) | Limited (mostly static caching) |
+| **WAF & Security** | Yes | Limited (depends on provider) |
+| **Origin Types** | Web apps, APIs, storage | Mostly blob storage, static sites |
+| **Use Case** | Dynamic + static content acceleration | High-performance static content delivery |
+
+👉 **When to use?**  
+- Use **Front Door** for dynamic apps needing both load balancing and caching.  
+- Use **CDN** for high-performance static content (images, videos, JS/CSS).
+
+---
+
+### **Summary: Which One to Choose?**
+- **🌍 Global HTTP(S) load balancing?** → **Azure Front Door**  
+- **🏢 Regional load balancing (e.g., AKS, VMs)?** → **Application Gateway**  
+- **🌐 Non-HTTP global routing (e.g., SQL, gaming)?** → **Traffic Manager**  
+- **📦 Pure static content delivery?** → **Azure CDN**  
+
+Azure Front Door is best for **global web applications** needing **WAF, caching, and intelligent routing**, while other services specialize in regional or non-HTTP workloads.
+
+Would you like a deeper comparison on a specific scenario? 😊
+
 ===== Azure Products
 * Azure Automation: uses runbooks to process a set of tasks on the VM's we target.  It is used to manage existing VMs rather than to create an infrastrucutre
 * Azure Resource Manager (ARM) Templates: Using ARM templates enables us to deploy and manage Azure resources (create, update, delete, etc..). Uses JSON format.
