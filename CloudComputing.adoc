@@ -250,7 +250,7 @@ Values in a Terraform script can be:
 ## Azure
 
 ### Regions vs Availability Zones
-image::/Azure-regions-availability-zones.png[]
+image::Azure-regions-availability-zones.png[]
 
 ### Azure Front Door
 Microsoft Azure Front Door is a global, scalable entry point that uses the Microsoft global edge network to create fast, secure, and highly scalable web applications. It provides load balancing, SSL offloading, and application acceleration with features like caching and route optimization.
