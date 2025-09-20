@@ -1,6 +1,6 @@
 = Cloud Computing - A Comprehensive Reference
-Doc Writer <ssharif@secunoid.com>
-v1.23.04.17.01
+Doc Writer <shahid.sharif@secunoid.com>
+v1.25.09.20.01
 :numbered:
 :sectnum:
 :sectnumlevels: 5
@@ -240,21 +240,25 @@ Values in a Terraform script can be:
 . `terraform state show <service name from the out above>` : Show details about the specific service
 . `terraform fmt` : Fix formatting of the terraform files
 
-==== AWS
+## AWS
 
-===== Security Assessment of the environment
+### Security Assessment of the environment
 
 * https://github.com/awslabs/aws-security-assessment-solution/blob/master/docs/how-to-deploy.md[AWS Self-Service Security Assessment Tool(SAT)]
 * https://github.com/awslabs[Amazon Web Services - Labs]
 
-==== Azure
+## Azure
 
+### Regions vs Availability Zones
+image::/Azure-regions-availability-zones.png[]
+
+### Azure Front Door
 Microsoft Azure Front Door is a global, scalable entry point that uses the Microsoft global edge network to create fast, secure, and highly scalable web applications. It provides load balancing, SSL offloading, and application acceleration with features like caching and route optimization.
 
-### **Azure Front Door vs. Other Azure Networking Services**
+#### **Azure Front Door vs. Other Azure Networking Services**
 Here’s how **Azure Front Door** compares to other Azure networking services:
 
-#### **1. Azure Front Door vs. Azure Application Gateway**
+##### **1. Azure Front Door vs. Azure Application Gateway**
 | Feature | Azure Front Door | Azure Application Gateway |
 |---------|----------------|--------------------------|
 | **Scope** | Global (multi-region) | Regional (single region) |
@@ -272,7 +276,7 @@ Here’s how **Azure Front Door** compares to other Azure networking services:
 
 ---
 
-#### **2. Azure Front Door vs. Azure Traffic Manager**
+##### **2. Azure Front Door vs. Azure Traffic Manager**
 | Feature | Azure Front Door | Azure Traffic Manager |
 |---------|----------------|----------------------|
 | **Scope** | Global | Global |
@@ -289,7 +293,7 @@ Here’s how **Azure Front Door** compares to other Azure networking services:
 
 ---
 
-#### **3. Azure Front Door vs. Azure CDN**
+##### **3. Azure Front Door vs. Azure CDN**
 | Feature | Azure Front Door | Azure CDN (Microsoft, Verizon, Akamai) |
 |---------|----------------|--------------------------------------|
 | **Primary Use** | Global load balancing + CDN | Pure content delivery (static assets) |
@@ -304,7 +308,7 @@ Here’s how **Azure Front Door** compares to other Azure networking services:
 
 ---
 
-### **Summary: Which One to Choose?**
+#### **Summary: Which One to Choose?**
 - **🌍 Global HTTP(S) load balancing?** → **Azure Front Door**  
 - **🏢 Regional load balancing (e.g., AKS, VMs)?** → **Application Gateway**  
 - **🌐 Non-HTTP global routing (e.g., SQL, gaming)?** → **Traffic Manager**  
@@ -314,7 +318,7 @@ Azure Front Door is best for **global web applications** needing **WAF, caching,
 
 Would you like a deeper comparison on a specific scenario? 😊
 
-===== Azure Products
+### Azure Products
 * Azure Automation: uses runbooks to process a set of tasks on the VM's we target.  It is used to manage existing VMs rather than to create an infrastrucutre
 * Azure Resource Manager (ARM) Templates: Using ARM templates enables us to deploy and manage Azure resources (create, update, delete, etc..). Uses JSON format.
 * Azure Bicep: Bicep is a language that uses domain-specific languate (DSL) to deploy Azure Resources
